@@ -55,3 +55,4 @@ MySQL(Database)|CSS|
 
 ## Links and Documents
 ### 1. [Schema Document](https://docs.google.com/document/d/1xRhhgMQ8qZG436_hzpF3xj-nXgE0rf1wI6bEavzY5KE/edit)
+### 2. [Library Design Flow](https://whimsical.com/library-8khLqftvQHyXJhb3m7ecsL)
