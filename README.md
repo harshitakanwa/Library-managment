@@ -54,5 +54,6 @@ MySQL(Database)|CSS|
 |   |JS|
 
 ## Links and Documents
+### 1. [Schema Diagram](https://github.com/jithendra1798/SE-Project/blob/main/assets/Tables%20Schema1.pdf)
 ### 1. [Schema Document](https://docs.google.com/document/d/1xRhhgMQ8qZG436_hzpF3xj-nXgE0rf1wI6bEavzY5KE/edit)
 ### 2. [Library Design Flow](https://whimsical.com/library-8khLqftvQHyXJhb3m7ecsL)
