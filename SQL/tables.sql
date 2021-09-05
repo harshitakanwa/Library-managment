@@ -96,6 +96,7 @@ CREATE TABLE Fine_table(
 
 CREATE TABLE Book_History(
     Current_Book_Holder_ID VARCHAR(100),
+    Book_ID VARCHAR(100),
     Book_Issued DATE,
     Book_Returned DATE,
     Fine_with_Book INT(10)
