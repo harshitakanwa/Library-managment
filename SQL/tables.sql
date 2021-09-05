@@ -14,7 +14,8 @@ CREATE TABLE USER (
     gender char(1) NOT NULL check(gender="M" or gender="F"),
     joined_date DATE NOT NULL,
     username varchar(16) NOT NULL References LOGIN(username),
-    UID BIGINT NOT NULL Unique check(100000000000 <= UID <= 999999999999)
+    UID BIGINT NOT NULL Unique check(100000000000 <= UID <= 999999999999),
+    user_type varchar(5) NOT NULL   # User/Admin
 );
 
 
@@ -44,7 +45,7 @@ CREATE TABLE USER_LIBRARY_DATA (
 
 # Subscription details
 
-CREATE TABLE Subscription(
+CREATE TABLE SUBSCRIPTION (
     Subscription_ID VARCHAR(100) PRIMARY KEY,
     Subscription_Amount INT(10),
     Max_Books INT(10)
