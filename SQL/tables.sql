@@ -28,23 +28,21 @@ CREATE TABLE LOGIN (
 
 
 
-#User_Library_Data
+# User_Library_Data
 
 CREATE TABLE USER_LIBRARY_DATA (
-    Username VARCHAR(100),
-    No_Of_Books INT(10),
-    Max_No_Of_Books INT(10),
-    Joined_On DATE,Library_ID VARCHAR(100) UNIQUE,
-    Photo MEDIUMBLOB NOT NULL,
-    Admin CHAR(100),
-    Fine CHAR(100),
-    primary key(Library_ID),
-    FOREIGN KEY(Username)REFERENCES Login_Details(Username) 
+    library_id int PRIMARY KEY references USER(library_id),
+    no_of_books INT(10),
+    max_no_of_books INT(10),
+    joined_on DATE DEFAULT GETDATE(),
+    photo MEDIUMBLOB NOT NULL,
+    admin CHAR(100),
+    fine CHAR(100)
 );
 
 
 
-#Subscription
+# Subscription details
 
 CREATE TABLE Subscription(
     Subscription_ID VARCHAR(100) PRIMARY KEY,
@@ -55,7 +53,7 @@ CREATE TABLE Subscription(
   
  
  
- #Book
+# Book details
  
 CREATE TABLE BOOK (
     Book_ID VARCHAR(100) UNIQUE,
@@ -99,3 +97,12 @@ CREATE TABLE Book_History(
     Book_Returned DATE,
     Fine_with_Book INT(10)
 );
+
+
+
+
+
+
+
+
+
