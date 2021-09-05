@@ -16,6 +16,8 @@ CREATE TABLE USER (
     username varchar(16) NOT NULL References LOGIN(username),
     UID BIGINT NOT NULL Unique check(100000000000 <= UID <= 999999999999),
     user_type varchar(5) NOT NULL   # User/Admin
+    address varchar(200) NOT NULL,
+    status varchar(50) NOT NULL
 );
 
 
