@@ -31,7 +31,7 @@
 
 ### 2. User
 > There are 3 types of users
-
+ 
 |New registration|Active user|Old user|
 |:---|:---|:---|
 |Registration yet to approve|Registration Approved|User in break/due fine|
@@ -58,3 +58,4 @@ MySQL(Database)|CSS|
 ### 2. [Schema Diagram Document](https://docs.google.com/document/d/1f0tBZoOreObHvXWhmM2hPPdkngzHdIXYdW9x57JuSEk/edit)
 ### 3. [Schema variables Document](https://docs.google.com/document/d/1xRhhgMQ8qZG436_hzpF3xj-nXgE0rf1wI6bEavzY5KE/edit)
 ### 4. [Library Project Design Flow](https://whimsical.com/library-8khLqftvQHyXJhb3m7ecsL)
+### 5. [Reference e-Library](https://www.edigitallibrary.com/)
