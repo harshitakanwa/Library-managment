@@ -31,17 +31,12 @@
 
 ### 2. User
 > There are 3 types of users
-<p align="center">
-  
-  
+ 
 |New registration|Active user|Old user|
 |:---|:---|:---|
 |Registration yet to approve|Registration Approved|User in break/due fine|
 |Shows Registration Pending|Can Access completely|Limited access|
-  
-  
-  
-</p>
+
 #### Active user features :
 - Can lend max of 4 books.
 - Request other user, if he needs a book taken by other user.
