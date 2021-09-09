@@ -50,6 +50,11 @@
 
 ### 3. Other Features
 - Automated emails to users, reminding for renewal of books
+- Users can search books in the catalogue
+- Lending/Taking books is of 3 categories
+    - Take book from Library
+    - Take book from other user
+    - Buy book, if available for sale
 - Feedback collection from user
 - Automated emails on registration approval/banning/termination
 - Automated generation of Library ID cards
