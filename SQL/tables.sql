@@ -109,8 +109,10 @@ CREATE TABLE BOOK_REVIEW(
     book_id REFERENCES BOOK(book_id),
     user_id references user(library_id),
     comment varchar(10000) ,
-    rating int not null check 1<=rating <=5
+    rating int not null check 1<=rating <=5,
+    like_dislike bool 
     );
+    
    
 
 
