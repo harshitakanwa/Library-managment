@@ -11,7 +11,7 @@
 
 
 ## Project Description
-* As the project name suggests automation in which the human input can be minimised and makes the work of librarian a lot easier and experience of user a lot simpler.This project is about library automation.
+* As the project name suggests automation in which the human input can be minimised and makes the work of librarian a lot easier and experience of user a lot simpler.
 * This has some new features like requesting book from other students, buying books from catalogue, if available for sale and reviewing and rating books and feedback of experience etc.  
 * We can also track the history of users (books user has taken before and now).  
 * We can also track history of books (users who took the book previously and now).  
