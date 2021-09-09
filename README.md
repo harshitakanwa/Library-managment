@@ -18,7 +18,7 @@
 * It makes library user and librarian work very simpler and easier.  
 
 ## Project Design Flow
-![Project Design Flow](http://url/to/img.png)
+![Project Design Flow](https://github.com/jithendra1798/SE-Project/blob/main/assets/Project%20Design%20Flow.png)
 
 ## Project Requirements/Features
 
