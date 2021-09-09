@@ -47,6 +47,7 @@
 - History of books he took.
 - Can buy a book, if availabe to sale by another user or by library.
 - Can generate and use the Library ID card in PDF
+- Can give Feedback of experience while taking books
 
 ### 3. Other Features
 - Automated emails to users, reminding for renewal of books
@@ -55,7 +56,6 @@
     - Take book from Library
     - Take book from other user
     - Buy book, if available for sale
-- Feedback collection from user
 - Automated emails on registration approval/banning/termination
 - Automated generation of Library ID cards
 - Different types of subscriptions for users
