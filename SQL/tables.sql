@@ -104,7 +104,7 @@ CREATE TABLE Book_History(
 
 
 
-# table_about Book_RE
+# table_about
 
 
 
