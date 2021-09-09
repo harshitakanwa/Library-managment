@@ -111,8 +111,9 @@ CREATE TABLE BOOK_REVIEW(
     comment varchar(10000) ,
     rating int not null check 1<=rating <=5,
     like_dislike bool 
-    );
-    
+ );
+ 
+  
    
 
 
