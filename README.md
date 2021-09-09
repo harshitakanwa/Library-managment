@@ -58,6 +58,7 @@
 - Feedback collection from user
 - Automated emails on registration approval/banning/termination
 - Automated generation of Library ID cards
+- Different types of subscriptions for users
 
 ## Software Specifications
 |Backend|Frontend|
