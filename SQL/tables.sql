@@ -80,7 +80,7 @@ CREATE TABLE BOOK (
  
 # Fine_table
  
-CREATE TABLE Fine_table(
+CREATE TABLE FINE(
     User_Library_ID VARCHAR(100),
     Book_ID VARCHAR(100),
     Fine_Amount INT(10),
@@ -94,7 +94,7 @@ CREATE TABLE Fine_table(
   
 # Book_History
 
-CREATE TABLE Book_History(
+CREATE TABLE BOOK_HISTORY(
     Current_Book_Holder_ID VARCHAR(100),
     Book_ID VARCHAR(100),
     Book_Issued DATE,
@@ -104,7 +104,14 @@ CREATE TABLE Book_History(
 
 
 
-# table_about
+# table_about review:
+CREATE TABLE BOOK_REVIEW(
+    book_id REFERENCES BOOK(book_id),
+    user_id references user(library_id),
+    comment varchar(10000) ,
+    rating int not null check 1<=rating <=5
+    );
+   
 
 
 
