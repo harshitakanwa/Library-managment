@@ -1,4 +1,4 @@
-<a href="https://jithendra1798.pythonanywhere.com/"><h1 align = "center"> Library Automation</h1></a>
+<a href="https://jithendra1798.pythonanywhere.com/"><h1 align = "center">Generic Library Automation</h1></a>
 
 ## Members
 ||Name|Roll No|Email|
@@ -11,11 +11,14 @@
 
 
 ## Project Description
-* This project is about library automation.  
-* This has some new features like requesting book from other students, buying books from catalogue, if available for sale etc.  
+* As the project name suggests automation in which the human input can be minimised and makes the work of librarian a lot easier and experience of user a lot simpler.This project is about library automation.
+* This has some new features like requesting book from other students, buying books from catalogue, if available for sale and reviewing and rating books and feedback of experience etc.  
 * We can also track the history of users (books user has taken before and now).  
 * We can also track history of books (users who took the book previously and now).  
 * It makes library user and librarian work very simpler and easier.  
+
+## Project Design Flow
+![Project Design Flow](http://url/to/img.png)
 
 ## Project Requirements/Features
 
@@ -40,11 +43,16 @@
 #### Active user features :
 - Can lend max of 4 books.
 - Request other user, if he needs a book taken by other user.
-- Pays fine, if he lost the book.
-- History of he took.
+- Pays fine, if he lost the book or delays renewal of book.
+- History of books he took.
 - Can buy a book, if availabe to sale by another user or by library.
 - Can generate and use the Library ID card in PDF
 
+### 3. Other Features
+- Automated emails to users, reminding for renewal of books
+- Feedback collection from user
+- Automated emails on registration approval/banning/termination
+- Automated generation of Library ID cards
 
 ## Software Specifications
 |Backend|Frontend|
