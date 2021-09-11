@@ -1,4 +1,4 @@
-<a href="https://jithendra1798.pythonanywhere.com/"><h1 align = "center">Generic Library Automation</h1></a>
+<a href="https://jithendra1798.pythonanywhere.com/"><h1 align = "center">Generic Library Managment</h1></a>
 
 ## Members
 ||Name|Roll No|Email|
