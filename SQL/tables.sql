@@ -1,3 +1,8 @@
+# Use only lowercase letters for variable names in tables(except for abbreviations)
+# Use only UPPERCASE letters for table names
+# Use same variable names for same thing from different tables
+
+
 CREATE DATABASE LIBRARY;
 use LIBRARY;
 
@@ -12,9 +17,10 @@ CREATE TABLE USER (
     email varchar(300) NOT NULL,
     DOB DATE NOT NULL,
     gender char(1) NOT NULL check(gender="M" or gender="F"),
-    joined_date DATE NOT NULL,
+    joined_date DATE DEFAULT GETDATE(),
     username varchar(16) NOT NULL References LOGIN(username),
     UID BIGINT NOT NULL Unique check(100000000000 <= UID <= 999999999999),
+    UID_photo BLOB NOT NULL,
     user_type varchar(5) NOT NULL   # User/Admin
     address varchar(200) NOT NULL,
     status varchar(50) NOT NULL
@@ -48,9 +54,9 @@ CREATE TABLE USER_LIBRARY_DATA (
 # Subscription details
 
 CREATE TABLE SUBSCRIPTION (
-    Subscription_ID VARCHAR(100) PRIMARY KEY,
-    Subscription_Amount INT(10),
-    Max_Books INT(10)
+    subscription_id VARCHAR(100) PRIMARY KEY,
+    subscription_amount INT(10),
+    max_books INT(10)
 );
   
   
@@ -59,20 +65,20 @@ CREATE TABLE SUBSCRIPTION (
 # Book details
  
 CREATE TABLE BOOK (
-    Book_ID VARCHAR(100) UNIQUE,
-    Title CHAR(100),
-    Auther CHAR(100),
-    Publication VARCHAR(100),
-    Edition VARCHAR(100),
-    No_OF_Copies INT(10),
-    Date_Of_Purchase DATE,
-    No_Of_Pages INT(100),
-    Prices INT(10),
-    Type CHAR(100),
-    Genere VARCHAR(100), 
-    Age_rating INT(5),
-    Current_Book_Holder CHAR(100), 
-    PRIMARY KEY(Book_ID)
+    book_id VARCHAR(100) UNIQUE,
+    title CHAR(100),
+    auther CHAR(100),
+    publication VARCHAR(100),
+    edition VARCHAR(100),
+    no_of_copies INT(10),
+    date_of_purchase DATE,
+    no_of_pages INT(100),
+    prices INT(10),
+    type CHAR(100),
+    genre VARCHAR(100), 
+    age_rating INT(5),
+    current_book_holder CHAR(100), 
+    PRIMARY KEY(book_id)
 );
  
  
@@ -81,13 +87,13 @@ CREATE TABLE BOOK (
 # Fine_table
  
 CREATE TABLE FINE(
-    User_Library_ID VARCHAR(100),
-    Book_ID VARCHAR(100),
-    Fine_Amount INT(10),
-    Paid ENUM('Yes','No'),
-    Paid_Date DATE, 
-    FOREIGN KEY(User_Library_ID) REFERENCES User_Library_Data(Username)
-    FOREIGN KEY(Book_ID) REFERENCES Book(Book_ID)
+    user_library_id VARCHAR(100),
+    book_id VARCHAR(100),
+    fine_amount INT(10),
+    paid ENUM('Yes','No'),
+    paid_date DATE, 
+    FOREIGN KEY(user_library_id) REFERENCES USER_LIBRARY_DATA(library_id)
+    FOREIGN KEY(book_id) REFERENCES BOOK(book_id)
 );
        
   
@@ -95,11 +101,11 @@ CREATE TABLE FINE(
 # Book_History
 
 CREATE TABLE BOOK_HISTORY(
-    Current_Book_Holder_ID VARCHAR(100),
-    Book_ID VARCHAR(100),
-    Book_Issued DATE,
-    Book_Returned DATE,
-    Fine_with_Book INT(10)
+    current_book_Holder_id VARCHAR(100),
+    book_id VARCHAR(100),
+    book_issued DATE,
+    book_returned DATE,
+    fine_with_book INT(10)
 );
 
 
@@ -108,7 +114,7 @@ CREATE TABLE BOOK_HISTORY(
 CREATE TABLE BOOK_REVIEW(
     book_id REFERENCES BOOK(book_id),
     user_id references user(library_id),
-    comment varchar(10000) ,
+    comment varchar(1000) ,
     rating int not null check 1<=rating <=5,
     like_dislike bool 
  );
