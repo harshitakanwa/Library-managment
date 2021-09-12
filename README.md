@@ -9,6 +9,8 @@
 |4.| Keerthana Patil | 191CS231 |<patilkeerthana.191cs231@nitk.edu.in>|
 |5.| Harshita | 191CS120 |<harshita.191cs120@nitk.edu.in>|
 
+## Roadmap of the Project
+![Roadmap of Library Management project image](https://raw.githubusercontent.com/jithendra1798/SE-Project/main/assets/Library%20Roadmap.jpg)
 
 ## Project Description
 * As the project name suggests automation in which the human input can be minimised and makes the work of librarian a lot easier and experience of user a lot simpler.
@@ -16,10 +18,6 @@
 * We can also track the history of users (books user has taken before and now).  
 * We can also track history of books (users who took the book previously and now).  
 * It makes library user and librarian work very simpler and easier.  
-
-## Roadmap of the Project
-![Roadmap of Library Management project image](https://raw.githubusercontent.com/jithendra1798/SE-Project/main/assets/Library%20Roadmap.jpg)
-
 
 ## Project Design Flow
 ![Project Design Flow](https://github.com/jithendra1798/SE-Project/blob/main/assets/Project%20Design%20Flow.png)
