@@ -75,3 +75,4 @@ MySQL(Database)|CSS|
 ### 3. [Schema variables Document](https://docs.google.com/document/d/1xRhhgMQ8qZG436_hzpF3xj-nXgE0rf1wI6bEavzY5KE/edit)
 ### 4. [Library Project Design Flow](https://whimsical.com/library-8khLqftvQHyXJhb3m7ecsL)
 ### 5. [Reference e-Library](https://www.edigitallibrary.com/)
+### 6. [Embed MySQL im Python/Django](https://www.tutorialspoint.com/python_data_access/python_mysql_introduction.htm)
