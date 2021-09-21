@@ -29,23 +29,23 @@
 
 ### 2. User
 
+- Can search medicines from local stores in their respective city, online.
 - Can buy/reserve medicines online.
 - Request other user, if he needs a medicine taken by other user.
 - History of medicines he took from each store.
-- Can buy a medicine, if availabe for sale by another user or by library.
-- Can generate and use the Library ID card in PDF
-- Can give Feedback of experience while taking books
+- Can buy a medicine, if availabe for sale by another user, if it is not required for him anymore.
+- Can give Feedback of experience while taking books.
+- Users can create medical prescription online.
 
 ### 3. Other Features
-- Automated emails to users, reminding for renewal of books
-- Users can search books in the catalogue
+- Automated emails to users, reminding for taking medicines according to prescription.
 - Lending/Taking books is of 3 categories
-    - Take book from Library
-    - Take book from other user
-    - Buy book, if available for sale
-- Automated emails on registration approval/banning/termination
-- Automated generation of Library ID cards
-- Different types of subscriptions for users
+    - Buy medicine from store directly through online.
+    - Request medicine from other user directly through online.
+    - Buy medicine from other user, if available for sale.
+- Automated emails on buying approval/transfer etc.
+- Automated generation of receipts.
+- Different types of subscriptions for users to use the portal.
 
 ## Software Specifications
 |Backend|Frontend|
