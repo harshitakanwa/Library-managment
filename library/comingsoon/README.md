@@ -1,9 +1,9 @@
-<a href="https://jithendra1798.pythonanywhere.com/"><h1 align = "center">Generic Library Managment</h1></a>
+<a href="https://jithendra1798.pythonanywhere.com/"><h1 align = "center">Digital Medicine Managment</h1></a>
 
 ## Members
-||Name|Roll No|Email|
-|---:|:---|:---:|:---|
-|1.| Jithendra Puppala | <siddartha1798@gmail.com> |
+||Name|Email|
+|---:|:---:|:---|
+|1.| Jithendra Sri SivaKesava Siddartha Puppala | <siddartha1798@gmail.com> |
 
 ## Roadmap of the Project
 ![Roadmap of Library Management project image](https://raw.githubusercontent.com/jithendra1798/SE-Project/main/assets/Library%20Roadmap.jpg)
