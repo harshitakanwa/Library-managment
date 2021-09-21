@@ -47,6 +47,15 @@
 - Automated generation of receipts.
 - Different types of subscriptions for users to use the portal.
 
+## Non-Functional Requirements
+- Scalability and reliability is taken care by django, as it is simple, highly scalable and flexible.
+- Security of the sensitive data transmission of users is taken care by django.
+- We designed the database with high data integrity.
+-  The performance of the application will be good with the optimised queries in MySQL.
+- Maintainability and Manageability of the application will be good, as we are following the best Software principles.
+- MySQL is capable enough to scale the project to even higher.
+- The portability of the application is high, as we are using one of the most popular framework.
+
 ## Software Specifications
 |Backend|Frontend|
 |:---|:---|
