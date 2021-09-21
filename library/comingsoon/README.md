@@ -9,14 +9,12 @@
 ![Roadmap of Library Management project image](https://raw.githubusercontent.com/jithendra1798/SE-Project/main/assets/Library%20Roadmap.jpg)
 
 ## Project Description
-* As the project name suggests automation in which the human input can be minimised and makes the work of librarian a lot easier and experience of user a lot simpler.
-* This has some new features like requesting book from other students, buying books from catalogue, if available for sale and reviewing and rating books and feedback of experience etc.  
-* We can also track the history of users (books user has taken before and now).  
-* We can also track history of books (users who took the book previously and now).  
-* It makes library user and librarian work very simpler and easier.  
+* As the project name suggests automation in which the human input can be minimised and makes the work of store owner a lot easier and experience of user a lot simpler.
+* This has some new features like requesting medicines from other users, buying/reserving medicines through online, if available for sale and reviewing and rating medicines and medical stores and feedback of experience with medical stores etc.  
+* We can also track the history of users (medicines user has bought before and now).  
+* We can also track history of medicines (users who took the medicines previously and now).  
+* It makes application user and store owner/manager work very simpler and easier.  
 
-## Project Design Flow
-![Project Design Flow](https://raw.githubusercontent.com/jithendra1798/SE-Project/main/library/comingsoon/index.png)
 
 ## Project Requirements/Features
 
