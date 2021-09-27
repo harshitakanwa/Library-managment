@@ -88,3 +88,4 @@ MySQL(Database)|CSS|
 ### 4. [Library Project Design Flow](https://whimsical.com/library-8khLqftvQHyXJhb3m7ecsL)
 ### 5. [Reference e-Library](https://www.edigitallibrary.com/)
 ### 6. [Embed MySQL in Python/Django](https://www.tutorialspoint.com/python_data_access/python_mysql_introduction.htm)
+### 7. [Dynamic Search Field - Django](https://betterprogramming.pub/how-to-make-search-fields-dynamic-in-django-rest-framework-72922bfa1543)
