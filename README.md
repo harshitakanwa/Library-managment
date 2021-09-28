@@ -80,9 +80,11 @@ MySQL(Database)|CSS|
 
 ##Hardware Requirements : 
 - The following table lists the minimum and recommended hardware requirements for the web application.
+
 |Component|Minimum|Recommended|
 |:---|:---|:---|
-|Processor|1.9 gigahertz (GHz) x86- or x64-bit dual core processor with SSE2 instruction set|3.3 gigahertz (GHz) or faster 64-bit dual core processor with SSE2 instruction set|Memory|2-GB RAM|4-GB RAM or more|
+|Processor|1.9 gigahertz (GHz) x86- or x64-bit dual core processor with SSE2 instruction set|3.3 gigahertz (GHz) or faster 64-bit dual core processor with SSE2 instruction set|
+|Memory|2-GB RAM|4-GB RAM or more|
 |Display|Super VGA with a resolution of 1024 x 768|Super VGA with a resolution of 1024 x 768|
 
 - The Software application can run in any of the following web browsers running on the specified operating systems:
