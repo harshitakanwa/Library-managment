@@ -22,6 +22,19 @@
 ## Project Design Flow
 ![Project Design Flow](https://github.com/jithendra1798/SE-Project/blob/main/assets/Project%20Design%20Flow.png)
 
+## Objectives of Software Engineering: 
+
+1. Maintainability – We are following best software engineering practices. So, it is feasible for the software to evolve to meet changing requirements.
+2. Efficiency – The software should not make wasteful use of computing devices such as memory, processor cycles, etc.
+3. Correctness – A software product is correct if the different requirements as specified in the SRS document have been correctly implemented.
+4. Reusability – A software product has good reusability if the different modules of the product can easily be reused to develop new products.
+5. Testability – Here software facilitates both the establishment of test criteria and the evaluation of the software with respect to those criteria.
+6. Reliability – It is an attribute of software quality. The extent to which a program can be expected to perform its desired function, over an arbitrary time period.
+7. Portability – In this case, the software can be transferred from one computer system or environment to another.
+8. Adaptability – In this case, the software allows differing system constraints and the user needs to be satisfied by making changes to the software.
+9. Interoperability – Capability of 2 or more functional units to process data cooperatively.
+
+
 ## Project Requirements/Features
 
 ### 1. Admin
