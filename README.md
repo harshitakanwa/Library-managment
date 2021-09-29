@@ -123,3 +123,4 @@ MySQL(Database)|CSS|
 ### 6. [Embed MySQL in Python/Django](https://www.tutorialspoint.com/python_data_access/python_mysql_introduction.htm)
 ### 7. [Dynamic Search Field - Django](https://betterprogramming.pub/how-to-make-search-fields-dynamic-in-django-rest-framework-72922bfa1543)
 ### 8. [Dynamic Search Field 2 - Django](https://openfolder.sh/django-tutorial-as-you-type-search-with-ajax)
+### 9. [Python MySQL](https://www.w3schools.com/python/python_mysql_getstarted.asp)
