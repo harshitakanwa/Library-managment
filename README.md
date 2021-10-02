@@ -111,6 +111,8 @@ MySQL(Database)|CSS|
     - Google Chrome (latest publicly-released version) running on the two latest publicly-release Mac OS versions
 - Apple Safari (latest publicly-released version) running on the two latest publicly-release Mac OS versions, or Apple iPad
 
+## Activity Flow Diagram
+![Activity Flow Diagram](https://raw.githubusercontent.com/jithendra1798/SE-Project/main/assets/Dataflow1.png)
 
 
 
