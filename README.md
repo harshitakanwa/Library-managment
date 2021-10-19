@@ -126,3 +126,4 @@ MySQL(Database)|CSS|
 ### 7. [Dynamic Search Field - Django](https://betterprogramming.pub/how-to-make-search-fields-dynamic-in-django-rest-framework-72922bfa1543)
 ### 8. [Dynamic Search Field 2 - Django](https://openfolder.sh/django-tutorial-as-you-type-search-with-ajax)
 ### 9. [Python MySQL](https://www.w3schools.com/python/python_mysql_getstarted.asp)
+### 10. [Override Admin Django](https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#admin-overriding-templates)
