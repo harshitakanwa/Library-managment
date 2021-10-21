@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts'
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'magnus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'magnus',
-        'USER': 'postgres',
-        'PASSWORD': '12345678',
+        'NAME': 'LibraryDB',
+        'USER': 'magnus',
+        'PASSWORD': 'Magnus2021',
         'HOST': 'localhost'
     }
 }
@@ -131,3 +131,6 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR,'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR,'contents')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')

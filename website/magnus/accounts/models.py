@@ -1,14 +1,17 @@
 from django.db import models
 
 # Create your models here.
-class Register(models.Model):
-    user_full_name = models.CharField(max_length = 100)
-    user_email = models.TextField()
+class Magnus_Library_User(models.Model):
+    user_first_name = models.CharField(max_length = 100)
+    user_last_name = models.CharField(max_length = 100, default=None)
+    user_phone = models.BigIntegerField()
     user_password = models.TextField()
-    user_gender = models.CharField()
+    user_aadhaar = models.BigIntegerField()
     user_address = models.TextField()
-    user_phone = models.IntegerField()
     user_dob = models.DateField()
-    user_aadhaar = models.IntegerField()
-    user_aadhar_photo  = models.ImageField(upload_to = 'user_aadhaar_photo')
-    user_photo  = models.ImageField(upload_to = 'user_photos')
+    user_email = models.TextField()
+    user_gender = models.CharField(max_length = 6)
+    user_status =models.CharField(max_length=20, default='new')
+    user_joined_date = models.DateField()
+    user_photo  = models.ImageField(upload_to = 'user_photos',default='photo')
+    user_aadhar_photo  = models.ImageField(upload_to = 'user_aadhaar_photo',default='photo')
