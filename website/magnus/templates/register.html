@@ -9,6 +9,11 @@
     <title>Register</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <!-- Custom Stylesheet -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
 
@@ -41,12 +46,23 @@
         <!--**********************************
             Content body start
         ***********************************-->
-        <div class="content-body">
+        <div style="width: 70%; margin:auto;">
             <!-- row -->
 
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
+                        <div>
+                            {% for message in messages %}
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert" style="background-color: red;">
+                                    <center><strong><h5>{{message}}</h5></strong></center> 
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor  %}
+                        </div>
+                        <br><br>
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="text-center" style="font-size: xx-large;">Register to Magnus Library</h4><br><br>
@@ -78,14 +94,14 @@
                                             <label class="col-lg-4 col-form-label" for="val-password">Password <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-password" name="val-password" placeholder="Choose a safe one..">
+                                                <input type="password" class="form-control" id="val-password" name="user_password" placeholder="Choose a safe one..">
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-lg-4 col-form-label" for="val-confirm-password">Confirm Password <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6">
-                                                <input type="password" class="form-control" id="val-confirm-password" name="user_password" placeholder="..and confirm it!">
+                                                <input type="password" class="form-control" id="val-confirm-password" name="user_password1" placeholder="..and confirm it!">
                                             </div>
                                         </div>
                                         <div class="form-group row">
@@ -171,24 +187,20 @@
         <!--**********************************
             Content body end
         ***********************************-->
-        <div>
-            {% for message in messages %}
-               <h3>{{message}}</h3>
-            {% endfor  %}
-        </div>
         
+
+    </div>        
         <!--**********************************
             Footer start
         ***********************************-->
-        <div class="footer">
-            <div class="copyright">
-                <p>Copyright &copy; Magnus Library 2021. All Rights Reserved.</p>
+        <div style="box-shadow: 4px 4px 5px grey;;text-align: center; margin:auto; background-color:lightgray; margin-bottom:0; padding:10px auto">
+            <div class="copyright" style="text-align: center; margin:auto; background-color:lightgray; margin-bottom:0; padding:10px auto">
+                <center><p>Copyright &copy; Magnus Library 2021. All Rights Reserved.</p></center>
             </div>
         </div>
         <!--**********************************
             Footer end
         ***********************************-->
-    </div>
     <!--**********************************
         Main wrapper end
     ***********************************-->
@@ -196,12 +208,14 @@
     <!--**********************************
         Scripts
     ***********************************-->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
     <script src="{% static 'plugins/common/common.min.js' %}"></script>
     <script src="{% static 'js/custom.min.js' %}"></script>
     <script src="{% static 'js/settings.js' %}"></script>
     <script src="{% static 'js/gleek.js' %}"></script>
     <script src="{% static 'js/styleSwitcher.js' %}"></script>
-
     <script src="{% static './plugins/validation/jquery.validate.min.js' %}"></script>
     <script src="{% static './plugins/validation/jquery.validate-init.js' %}"></script>
 

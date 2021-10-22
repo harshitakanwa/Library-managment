@@ -4,7 +4,83 @@
 from email.message import EmailMessage
 import smtplib, ssl
 import imghdr
+from django.shortcuts import render, redirect
 import datetime
+from django.contrib.auth.models import auth, User
+from .models import Magnus_Library_User
+from django.contrib import messages
+import re
+
+def validate_email(email):
+    regex = r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b'
+
+    if(re.fullmatch(regex, email)):
+        return True
+    else:
+        return False
+
+def validate_password(password):
+    flag = 0
+    if (len(password)<6):
+        flag = 1
+    elif not re.search("[a-z]", password):
+        flag = 1
+    elif not re.search("[A-Z]", password):
+        flag = 1
+    elif not re.search("[0-9]", password):
+        flag = 1
+    elif not re.search("[_@$#&*,.()~]", password):
+        flag = 1
+    else:
+        flag = 0
+
+    if flag==0:
+        return True
+    else:
+        return False
+
+
+
+
+def validate(request,user_password, user_password1, user_aadhaar, user_email, user_phone):
+    flag = 0
+    if user_password1!=user_password:
+        messages.info(request,'Password not matched !')
+        flag = 1
+    else:
+        if not validate_password(user_password):
+            messages.info(request,'''Your password should include atleast one :
+             uppercase [A-Z],
+             lowercase [a-z],
+             number [0-9],
+             special character [ , . _ @ $ # & * ( ) ~ ]''')
+            flag = 1
+    if validate_email(user_email):
+        if Magnus_Library_User.objects.filter(user_email=user_email).exists() or User.objects.filter(email=user_email).exists():
+            messages.info(request, 'Email id Alredy exists !')
+            flag = 1
+    else:
+        messages.info(request,'Please Enter a valid email !')
+        flag = 1
+
+    if len(str(user_aadhaar))==12:
+        if Magnus_Library_User.objects.filter(user_aadhaar=user_aadhaar).exists():
+            messages.info(request, 'Aadhaar already Taken !')
+            flag = 1
+    else:
+        messages.info(request,'Please enter a valid 12-digit Aadhaar Number !')
+        flag = 1
+
+    if len(str(user_phone))!=10:
+        messages.info(request,'Please enter a valid 10-digit Mobile Number !')
+        flag = 1
+
+    if flag==1:
+        return False
+    else:
+        return True
+
+
 
 def send_user_details(user_email, username, user_password, user_first_name):
     smtp_server = 'smtp.gmail.com'
