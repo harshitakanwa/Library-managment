@@ -11,7 +11,6 @@ def contact(request):
     if request.method=='POST':
         email = request.POST['email']
         query = request.POST['query']
-        print(email,'===========>>>>>>>>>>',query)
         Query = Queries(
             email = email,
             query = query

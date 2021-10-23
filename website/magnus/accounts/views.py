@@ -5,13 +5,15 @@ from django.contrib import messages
 from django.contrib.auth.models import auth, User
 from .models import Magnus_Library_User
 import datetime
-from . import required_functions, views
+from . import required_functions
 import threading
 # Create your views here.
 
 
 
 def login(request):
+    if request.user.is_authenticated:
+        return redirect('users')
     if request.method == "POST":
         username = request.POST['username']
         password = request.POST['user_password']
@@ -21,7 +23,7 @@ def login(request):
             return redirect("users")
         else:
             messages.info(request, 'Invalid Credentials')
-            return views.users(request, user)
+            return redirect('login')
     else:
         return render(request, 'login.html')
 

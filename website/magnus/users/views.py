@@ -1,6 +1,10 @@
 from django.shortcuts import redirect, render
-from django.contrib.auth.models import auth, User
+from django.contrib import messages
 
 # Create your views here.
 def users(request):
-    return render(request,'users.html')
+    if request.user.is_authenticated:
+        return render(request,'users.html')
+    else:
+        messages.info(request,'Please login to access your Dashboard !')
+        return redirect('login')
