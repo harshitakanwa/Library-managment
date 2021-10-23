@@ -127,3 +127,4 @@ MySQL(Database)|CSS|
 ### 8. [Dynamic Search Field 2 - Django](https://openfolder.sh/django-tutorial-as-you-type-search-with-ajax)
 ### 9. [Python MySQL](https://www.w3schools.com/python/python_mysql_getstarted.asp)
 ### 10. [Override Admin Django](https://docs.djangoproject.com/en/3.2/ref/contrib/admin/#admin-overriding-templates)
+### 11. [Django Messages and Mails](https://www.ordinarycoders.com/blog/article/django-messages-framework)
