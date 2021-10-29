@@ -1,0 +1,753 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Quixlab - Bootstrap Admin Dashboard Template by Themefisher.com</title>
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
+    <!-- Custom Stylesheet -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!--*******************
+        Preloader start
+    ********************-->
+    <div id="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="3" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+    <!--*******************
+        Preloader end
+    ********************-->
+
+    
+    <!--**********************************
+        Main wrapper start
+    ***********************************-->
+    <div id="main-wrapper">
+
+        <!--**********************************
+            Nav header start
+        ***********************************-->
+        <div class="nav-header">
+            <div class="brand-logo">
+                <a href="../../">
+                    <b class="logo-abbr"><img src="{% static 'images/logo.png' %}" alt=""> </b>
+                    <span class="logo-compact"><img src="{% static '../images/logo-compact.png' %}" alt=""></span>
+                    <span class="brand-title">
+                        <img src="{% static 'images/logo-text.png' %}" alt="">
+                    </span>
+                </a>
+            </div>
+        </div>
+        <!--**********************************
+            Nav header end
+        ***********************************-->
+
+        <!--**********************************
+            Header start
+        ***********************************-->
+        <div class="header">    
+            <div class="header-content clearfix">
+                
+                <div class="nav-control">
+                    <div class="hamburger">
+                        <span class="toggle-icon"><i class="icon-menu"></i></span>
+                    </div>
+                </div>
+                <div class="header-left">
+                    <div class="input-group icons">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text bg-transparent border-0 pr-2 pr-sm-3" id="basic-addon1"><i class="mdi mdi-magnify"></i></span>
+                        </div>
+                        <input type="search" class="form-control" placeholder="Search Dashboard" aria-label="Search Dashboard">
+                        <div class="drop-down   d-md-none">
+							<form action="#">
+								<input type="text" class="form-control" placeholder="Search">
+							</form>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <ul class="clearfix">
+                        <li class="icons dropdown">
+                            <a href="javascript:void(0)">
+                                <i class="mdi mdi-email-outline"></i>
+                                <span class="badge gradient-1 badge-pill badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">3 New Messages</span>  
+                                    
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'images/avatar/1.jpg' %}" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Saiful Islam</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-unread">
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'images/avatar/2.jpg' %}" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Adam Smith</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Can you do me a favour?</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'images/avatar/3.jpg' %}" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Barak Obama</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hi Teddy, Just wanted to let you ...</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <img class="float-left mr-3 avatar-img" src="{% static 'images/avatar/4.jpg' %}" alt="">
+                                                <div class="notification-content">
+                                                    <div class="notification-heading">Hilari Clinton</div>
+                                                    <div class="notification-timestamp">08 Hours ago</div>
+                                                    <div class="notification-text">Hello</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown">
+                            <a href="javascript:void(0)">
+                                <i class="mdi mdi-bell-outline"></i>
+                                <span class="badge badge-pill gradient-2 badge-primary">3</span>
+                            </a>
+                            <div class="drop-down animated fadeIn dropdown-menu dropdown-notfication">
+                                <div class="dropdown-content-heading d-flex justify-content-between">
+                                    <span class="">2 New Notifications</span>  
+                                    
+                                </div>
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Events near you</h6>
+                                                    <span class="notification-text">Within next 5 days</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Started</h6>
+                                                    <span class="notification-text">One hour ago</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Event Ended Successfully</h6>
+                                                    <span class="notification-text">One hour ago</span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void()">
+                                                <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
+                                                <div class="notification-content">
+                                                    <h6 class="notification-heading">Events to Join</h6>
+                                                    <span class="notification-text">After two days</span> 
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown d-none d-md-flex">
+                            <a href="javascript:void(0)" class="log-user"  data-toggle="dropdown">
+                                <span>English</span>  <i class="fa fa-angle-down f-s-14" aria-hidden="true"></i>
+                            </a>
+                            <div class="drop-down dropdown-language animated fadeIn  dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li><a href="javascript:void()">English</a></li>
+                                        <li><a href="javascript:void()">Dutch</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="icons dropdown">
+                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                                <span class="activity active"></span>
+                                <img src="images/user/1.png" height="40" width="40" alt="">
+                            </div>
+                            <div class="drop-down dropdown-profile   dropdown-menu">
+                                <div class="dropdown-content-body">
+                                    <ul>
+                                        <li>
+                                            <a href="app-profile.html"><i class="icon-user"></i> <span>Profile</span></a>
+                                        </li>
+                                        <li>
+                                            <a href="email-inbox.html"><i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill badge-primary">3</div></a>
+                                        </li>
+                                        
+                                        <hr class="my-2">
+                                        <li>
+                                            <a href="page-lock.html"><i class="icon-lock"></i> <span>Lock Screen</span></a>
+                                        </li>
+                                        <li><a href="page-login.html"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Header end ti-comment-alt
+        ***********************************-->
+
+        <!--**********************************
+            Sidebar start
+        ***********************************-->
+        <div class="nk-sidebar">           
+            <div class="nk-nav-scroll">
+                <ul class="metismenu" id="menu">
+                    <li class="nav-label">Dashboard</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./index.html">Home 1</a></li>
+                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
+                        </ul>
+                    </li>
+                    <li class="mega-menu mega-menu-sm">
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-globe-alt menu-icon"></i><span class="nav-text">Layouts</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./layout-blank.html">Blank</a></li>
+                            <li><a href="./layout-one-column.html">One Column</a></li>
+                            <li><a href="./layout-two-column.html">Two column</a></li>
+                            <li><a href="./layout-compact-nav.html">Compact Nav</a></li>
+                            <li><a href="./layout-vertical.html">Vertical</a></li>
+                            <li><a href="./layout-horizontal.html">Horizontal</a></li>
+                            <li><a href="./layout-boxed.html">Boxed</a></li>
+                            <li><a href="./layout-wide.html">Wide</a></li>
+                            
+                            
+                            <li><a href="./layout-fixed-header.html">Fixed Header</a></li>
+                            <li><a href="layout-fixed-sidebar.html">Fixed Sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Apps</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-envelope menu-icon"></i> <span class="nav-text">Email</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./email-inbox.html">Inbox</a></li>
+                            <li><a href="./email-read.html">Read</a></li>
+                            <li><a href="./email-compose.html">Compose</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-screen-tablet menu-icon"></i><span class="nav-text">Apps</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./app-profile.html">Profile</a></li>
+                            <li><a href="./app-calender.html">Calender</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-graph menu-icon"></i> <span class="nav-text">Charts</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./chart-flot.html">Flot</a></li>
+                            <li><a href="./chart-morris.html">Morris</a></li>
+                            <li><a href="./chart-chartjs.html">Chartjs</a></li>
+                            <li><a href="./chart-chartist.html">Chartist</a></li>
+                            <li><a href="./chart-sparkline.html">Sparkline</a></li>
+                            <li><a href="./chart-peity.html">Peity</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">UI Components</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">UI Components</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./ui-accordion.html">Accordion</a></li>
+                            <li><a href="./ui-alert.html">Alert</a></li>
+                            <li><a href="./ui-badge.html">Badge</a></li>
+                            <li><a href="./ui-button.html">Button</a></li>
+                            <li><a href="./ui-button-group.html">Button Group</a></li>
+                            <li><a href="./ui-cards.html">Cards</a></li>
+                            <li><a href="./ui-carousel.html">Carousel</a></li>
+                            <li><a href="./ui-dropdown.html">Dropdown</a></li>
+                            <li><a href="./ui-list-group.html">List Group</a></li>
+                            <li><a href="./ui-media-object.html">Media Object</a></li>
+                            <li><a href="./ui-modal.html">Modal</a></li>
+                            <li><a href="./ui-pagination.html">Pagination</a></li>
+                            <li><a href="./ui-popover.html">Popover</a></li>
+                            <li><a href="./ui-progressbar.html">Progressbar</a></li>
+                            <li><a href="./ui-tab.html">Tab</a></li>
+                            <li><a href="./ui-typography.html">Typography</a></li>
+                        <!-- </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
+                        </a>
+                        <ul aria-expanded="false"> -->
+                            <li><a href="./uc-nestedable.html">Nestedable</a></li>
+                            <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
+                            <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
+                            <li><a href="./uc-toastr.html">Toastr</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="widgets.html" aria-expanded="false">
+                            <i class="icon-badge menu-icon"></i><span class="nav-text">Widget</span>
+                        </a>
+                    </li>
+                    <li class="nav-label">Forms</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-note menu-icon"></i><span class="nav-text">Forms</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./form-basic.html">Basic Form</a></li>
+                            <li><a href="./form-validation.html">Form Validation</a></li>
+                            <li><a href="./form-step.html">Step Form</a></li>
+                            <li><a href="./form-editor.html">Editor</a></li>
+                            <li><a href="./form-picker.html">Picker</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Table</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-menu menu-icon"></i><span class="nav-text">Table</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./table-basic.html" aria-expanded="false">Basic Table</a></li>
+                            <li><a href="./table-datatable.html" aria-expanded="false">Data Table</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Pages</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-notebook menu-icon"></i><span class="nav-text">Pages</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="./page-login.html">Login</a></li>
+                            <li><a href="./page-register.html">Register</a></li>
+                            <li><a href="./page-lock.html">Lock Screen</a></li>
+                            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false">Error</a>
+                                <ul aria-expanded="false">
+                                    <li><a href="./page-error-404.html">Error 404</a></li>
+                                    <li><a href="./page-error-403.html">Error 403</a></li>
+                                    <li><a href="./page-error-400.html">Error 400</a></li>
+                                    <li><a href="./page-error-500.html">Error 500</a></li>
+                                    <li><a href="./page-error-503.html">Error 503</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!--**********************************
+            Sidebar end
+        ***********************************-->
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+            <!-- row -->
+           
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Trending</h4>
+                        <div class="bootstrap-carousel">
+                            <div data-ride="carousel" class="carousel slide" id="carouselExampleCaptions">
+                                <ol class="carousel-indicators">
+                                    <li class="" data-slide-to="0" data-target="#carouselExampleCaptions"></li>
+                                    <li data-slide-to="1" data-target="#carouselExampleCaptions" class=""></li>
+                                    <li data-slide-to="2" data-target="#carouselExampleCaptions" class="active"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="carousel-item">
+                                        <img class="d-block w-100" src="https://media.wired.co.uk/photos/606d9f237aff197af7c72c6f/master/w_1600,c_limit/wired-books-32.jpg" style="height: 200px;">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img alt="" class="d-block w-100" src="https://media.wired.co.uk/photos/606d9f23938ecee6e930e6c8/master/w_1600,c_limit/wired-books-29.jpg" style="height: 200px;">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item active">
+                                        <img alt="" class="d-block w-100" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPbTNnFlxcvLmq5yvAg02pG5z_2-cYVq-y00bBUwkfj6yWpawWWsEzGX5g3SyBtFxqCqA&usqp=CAU" style="height: 200px;">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            
+                                        </div>
+                                    </div>
+                                </div><a data-slide="prev" href="#carouselExampleCaptions" class="carousel-control-prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span> </a><a data-slide="next" href="#carouselExampleCaptions"
+                                    class="carousel-control-next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid">
+                <!-- End Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="d-inline">Fiction Books</h4>
+                        <p class="text-muted">Sorted by Year</p>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f22a876dd2203a63db5/master/w_1600,c_limit/wired-books-31.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card title">Who Fears Death, by Nnedi Okorafor (2018)</h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;"> There’s genocide and suffering between two warring tribes and, amidst this immense pain and violence, Onyesonwu is born – her name means “who fears death?” in an ancient language. </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f230286a2e569b12c39/master/w_1600,c_limit/wired-books-5.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">A Court of Thorns and Roses, by Sarah J. Maas (2020)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Imagine Beauty and the Beast but ramp up the romance and fantasy even more, transform Beauty into a huntress and Beast into some kind of fantastical faerie lord and that’s A Court of Thorns and Roses. Sara J. But this was no ordinary wolf.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f23938ecee6e930e6c8/master/w_1600,c_limit/wired-books-29.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">The Power, by Naomi Alderman (2017)</h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">The Power could also be classed as science-fiction, but we’re including it in our fantasy recommendations because what’s more fantastical than every woman in the land suddenly being able to electrocute men Palpatine-style with their fingertips?</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f236ab54fce4fbb1ebc/master/w_1600,c_limit/wired-books-26.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">The Fifth Season, by N. K. Jemisin (2016)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">It doesn’t feel like there’s a right way to begin explaining the truly monumental premise and proportions of The Fifth Season, so let’s just dive in. This book takes place on a planet with one massive supercontinent called Stillness.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                    </div>
+                </div>
+                <!-- End Row -->
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="d-inline"></h4>
+                        <p class="text-muted"></p>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f22751ea43ccd9888c2/master/w_1600,c_limit/wired-books-19.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card title">Riot Baby, by Tochi Onyebuchi (2020)</h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Set in the near future, Riot Baby might be a story with fantastical elements weaved throughout it, but it explores very real, pertinent and important issues of race and bias algorithms. The riot baby in this book is Kev, a young Black man who’s in prison.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f22307b8f0b37c72643/master/w_1600,c_limit/wired-books-14.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">Kindred, by Octavia E. Butler (2018)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Some might say Octavia E. Butler’s fantastic Kindred is a work of science-fiction or speculative fiction, but it’s in our list because Butler herself called it “a kind of grim fantasy”. This is a time travel narrative, but we’d bet it’s quite unlike any you’ve read before.Kindred follows the story of a woman.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f22646b991cdbf5fa59/master/w_1600,c_limit/wired-books-7.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">Earthlings, by Sayaka Murata (2020)</h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Not one for the faint hearted, this dark fantasy comedy from the author of Convenience Store Woman is tricky to pin down into any one category and the final pages will probably leave you gobsmacked. Natsuki and Yuu are cousins who have long prepared to be abducted back to their home planet. </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f23938ecee6e930e6ca/master/w_1600,c_limit/wired-books-4.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">Circe, by Madeline Miller (2018)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Circe, daughter of Titan sun god Helios, finds herself overshadowed in the halls of the gods until she discovers her own, different power: witchcraft. Banished to a deserted island and repeatedly let down by the men she puts her trust in, Circe must forge her own path: as a goddess, a witch, and a woman.   </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="d-inline"></h4>
+                        <p class="text-muted"></p>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f23307b8f0b37c72645/master/w_1600,c_limit/wired-books-15.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card title">Memory, Sorrow, and Thorn, by Tad Williams (1988 to 1993)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">The three books in this trilogy, Stone of Farewell and To Green Angel Tower, are beautifully crafted fantasies that deftly interweave almost comically simple tropes with a rewarding complexity and depth. </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f230286a2e569b12c39/master/w_1600,c_limit/wired-books-5.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">A Court of Thorns and Roses, by Sarah J. Maas (2020)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Imagine Beauty and the Beast but ramp up the romance and fantasy even more, transform Beauty into a huntress and Beast into some kind of fantastical faerie lord and that’s A Court of Thorns and Roses. Sara J. But this was no ordinary wolf.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f24581351b2c44d79e3/master/w_1600,c_limit/wired-books-22.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">Malazan Book of the Fallen series, by Steven Erikson (1999 to 2011)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Spanning 10 books and over 9,000 pages of brutal, beautiful and complex fantasy writing, Steven Erikson's series delivers world building on a larger scale than Tolkien and Jordan put together. Erikson will have you laughing.</p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>CRead more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f242a09c24efb8f4250/master/w_1600,c_limit/wired-books-10.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">The First Law Trilogy, by Joe Abercrombie (2006 to 2008)
+
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Joe Abercrombie writes brilliant characters. Be it the story of an ageing berserker, a crippled torturer or a pompous noble, his The First Law Trilogy immerses you in a bloody mire of violent, visceral and gritty adventures. </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="d-inline"></h4>
+                        <p class="text-muted"></p>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f23ce1204c637f2f2dd/master/w_1600,c_limit/wired-books-23.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card title">The Golem and the Djinni, by Helene Wecker (2013)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Helene Wecker's debut novel is an eerie tale of two magical creatures set loose in 19th century New York. A golem – a mythical creature of Jewish lore – awakens during a sea voyage.he's trapped in human form. </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f24f19707fe1aef2fb4/master/w_1600,c_limit/wired-books-6.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">Dune, by Frank Herbert (1965)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Welcome to a desert planet where water is more precious than gold, everyone wears moisture-preserving jumpsuits and giant worm creatures can come out of the earth's floor that can kill you at any moment. This is Dune, a stark wasteland where warring houses scheme. </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f23ad865a997660a979/master/w_1600,c_limit/wired-books-24.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">The Dark Tower series, by Stephen King (1998)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">"The man in black fled across the desert, and the gunslinger followed." This iconic line kicks off Stephen King's iconic The Dark Tower, which mashes together fantasy, westerns and elements of science fiction.The first of seven books follows gunslinger Roland </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6 col-lg-3">
+                                <div class="card">
+                                    <img class="img-fluid" src="https://media.wired.co.uk/photos/606d9f24687a704c2c361741/master/w_1600,c_limit/wired-books-21.jpg" alt="">
+                                    <div class="card-body" style="height:200px">
+                                        <h5 class="card-title">A Song of Ice and Fire, by George R.R. Martin (1996)
+                                        </h5>
+                                        <p class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">Fans of the television series have been distancing themselves from Game of Thrones in droves since that disastrous final season, but George R.R. Martin's books remain relatively untainted. A Game of Thrones, the first in the A Song of Ice and Fire Series. </div>
+                                    <div class="card-footer">
+                                        <p class="card-text d-inline"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p><a href="#" class="card-link float-right"><small>Read more</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <!--hghgh-->
+
+
+                
+        <!--**********************************
+            Content body end
+        ***********************************-->
+        
+        
+        <!--**********************************
+            Footer start
+        ***********************************-->
+        <div class="footer">
+            <div class="copyright">
+                <p>Copyright &copy; Designed & Developed by <a href="https://themeforest.net/user/quixlab">Quixlab</a> 2018</p>
+            </div>
+        </div>
+        <!--**********************************
+            Footer end
+        ***********************************-->
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <script src="{% static 'plugins/common/common.min.js' %}"></script>
+    <script src="{% static 'js/custom.min.js' %}"></script>
+    <script src="{% static 'js/settings.js' %}"></script>
+    <script src="{% static 'js/gleek.js' %}"></script>
+    <script src="{% static 'js/styleSwitcher.js' %}"></script>
+
+</body>
+
+</html>

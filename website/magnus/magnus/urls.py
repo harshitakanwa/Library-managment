@@ -17,12 +17,24 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import handler404, handler500, handler400, handler403
+from django.views.defaults import page_not_found
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('landingpage.urls')),
     path('accounts/',include('accounts.urls')),
-    path('users/',include('users.urls'))
+    path('users/',include('users.urls')),
+    path('books/',include('books.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+
+#page_not_found(request)
+
+'''
+handler404 = 'landingpage.views.error_404'
+handler500 = 'landingpage.views.error_500'
+handler403 = 'landingpage.views.error_403'
+handler400 = 'landingpage.views.error_400' '''

@@ -12,7 +12,7 @@
     <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet">
     <!-- Custom Stylesheet -->
-    <link href="{% static './plugins/toastr/css/toastr.min.css' }" rel="stylesheet">
+    <link href="{% static './plugins/toastr/css/toastr.min.css' %}" rel="stylesheet">
 </head>
 
 <body class="h-100">
@@ -77,7 +77,9 @@
                                     </div>
                                     <button type="submit" class="btn login-form__btn submit w-100">Sign In</button>
                                 </form>
-                                <p class="mt-5 login-form__footer">Dont have account? <a href="register" class="text-primary" style="font-size:medium;">Sign Up</a> now</p>
+                                <center><p class="mt-5 login-form__footer">Forgot Password/Username ? <a href="forgotPassword" class="text-primary" style="font-size:medium;">Get Login Credentials</a> now</p></center>
+                                <center><p class="mt-5 login-form__footer">Don't have account? <a href="register" class="text-primary" style="font-size:medium;">Sign Up</a> now</p></center>
+
                             </div>
                         </div>
                     </div>
@@ -108,8 +110,8 @@
     <script src="{% static 'js/gleek.js' %}"></script>
     <script src="{% static 'js/styleSwitcher.js' %}"></script>
     <!-- Toastr -->
-    <script src="{% static 'plugins/toastr/js/toastr.min.js' }"></script>
-    <script src="{% static 'plugins/toastr/js/toastr.init.js' }"></script>
+    <script src="{% static 'plugins/toastr/js/toastr.min.js' %}"></script>
+    <script src="{% static 'plugins/toastr/js/toastr.init.js' %}"></script>
 
 </body>
 
