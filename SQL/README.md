@@ -3,8 +3,6 @@
 ![Schema diagram](https://github.com/jithendra1798/SE-Project/blob/main/assets/Tables%20Schema1.pdf)
 
 
-[embed]https://github.com/jithendra1798/SE-Project/blob/main/assets/Tables%20Schema1.pdf[/embed]
-
 [Doc](https://docs.google.com/viewer?url=${https://github.com/jithendra1798/SE-Project/blob/main/assets/Tables%20Schema1.pdf})
 ## 2. Documents
 ### 1. [Schema Diagram Document](https://docs.google.com/document/d/1f0tBZoOreObHvXWhmM2hPPdkngzHdIXYdW9x57JuSEk/edit)
