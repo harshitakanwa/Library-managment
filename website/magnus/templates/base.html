@@ -6,7 +6,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Welcome</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
     <!-- Pignose Calender -->
@@ -45,7 +44,7 @@
         ***********************************-->
         <div class="nav-header">
             <div class="brand-logo">
-                <a href="/users">
+                <a href="*/users">
                     <b class="logo-abbr"><img src="{% static 'images/logo.png' %}" alt=""> </b>
                     <span class="logo-compact"><img src="{% static './images/logo-compact.png' %}" alt=""></span>
                     <span class="brand-title">
@@ -83,14 +82,15 @@
                 </div>
                 <div class="header-right">
                     <ul class="clearfix">
-                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                        <li class="icons dropdown">
+                            <a href="/users/notifications">
                                 <i class="mdi mdi-email-outline"></i>
-                                <span class="badge badge-pill gradient-1">3</span>
+                                <span class="badge badge-pill gradient-1">{{no_of_requests}}</span>
                             </a>
-                            <div class="drop-down animated fadeIn dropdown-menu">
+                            <!--<div class="drop-down animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-heading d-flex justify-content-between">
                                     <span class="">New Messages</span>  
-                                    <a href="javascript:void()" class="d-inline-block">
+                                    <a href="/users/notifications" class="d-inline-block">
                                         <span class="badge badge-pill gradient-1">3</span>
                                     </a>
                                 </div>
@@ -110,9 +110,9 @@
                                     </ul>
                                     
                                 </div>
-                            </div>
+                            </div>-->
                         </li>
-                        <li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
+                        <!--<li class="icons dropdown"><a href="javascript:void(0)" data-toggle="dropdown">
                                 <i class="mdi mdi-bell-outline"></i>
                                 <span class="badge badge-pill gradient-2">3</span>
                             </a>
@@ -120,7 +120,6 @@
                                 <div class="dropdown-content-heading d-flex justify-content-between">
                                     <span class="">New Notifications</span>  
                                     <a href="javascript:void()" class="d-inline-block">
-                                        <!-- jinja format -->
                                         <span class="badge badge-pill gradient-2"></span>
                                     </a>
                                 </div>
@@ -128,7 +127,7 @@
                                     <ul>
                                         
                                         <li>
-                                            <!-- jinja code -->
+                                              
                                             <a href="javascript:void()">
                                                 <span class="mr-3 avatar-icon bg-danger-lighten-2"><i class="icon-present"></i></span>
                                                 <div class="notification-content">
@@ -141,23 +140,27 @@
                                     
                                 </div>
                             </div>
-                        </li>
+                        </li>-->
                       
                         <li class="icons dropdown">
-                            <div class="user-img c-pointer position-relative"   data-toggle="dropdown">
+                            <div class="user-img c-pointer position-relative" data-toggle="dropdown">
+                                {% if no_of_requests %}
+                                <span class="activity unactive"></span>
+                                {% else %}
                                 <span class="activity active"></span>
+                                {% endif %}
                                 <!-- jinja format -->
-                                <img src="{{user.user_photo.url}}" height="40" width="40" alt="">
+                                <img src="/media/{{user.user_photo}}" height="40" width="40" alt="">
                             </div>
                             <div class="drop-down dropdown-profile animated fadeIn dropdown-menu">
                                 <div class="dropdown-content-body">
                                     <ul>
                                         <li>
-                                            <a href="../users"><i class="icon-user"></i> <span>Profile</span></a>
+                                            <a href="/users"><i class="icon-user"></i> <span>Profile</span></a>
                                         </li>
                                         <li>
-                                            <a href="javascript:void()">
-                                                <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">3</div>
+                                            <a href="/users/notifications">
+                                                <i class="icon-envelope-open"></i> <span>Inbox</span> <div class="badge gradient-3 badge-pill gradient-1">{{no_of_requests}}</div>
                                             </a>
                                         </li>
                                         
@@ -166,7 +169,7 @@
                                             C:\Users\mvkri\OneDrive\Desktop\quixlab\ 
                                             <a href="{% static './page-error-404.html' %}"><i class="icon-lock"></i> <span>Lock Screen</span></a>
                                         </li>-->
-                                        <li><a href="../accounts/logout"><i class="icon-key"></i> <span>Logout</span></a></li>
+                                        <li><a href="/accounts/logout"><i class="icon-key"></i> <span>Logout</span></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -185,14 +188,55 @@
         <div class="nk-sidebar">           
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
-                    <li class="nav-label">Dashboard</li>
+                    <li class="nav-label">Account Section</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-notebook menu-icon"></i><span class="nav-text">{{user.user_first_name}}</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/users">Profile</a></li>
+                            <li><a href="/users/notifications">Notifications</a></li>
+                            <li><a href="/accounts/logout">Logout</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-menu menu-icon"></i><span class="nav-text">Home</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/" aria-expanded="false">Home</a></li>
+                            <li><a href="/users" aria-expanded="false">Dashboard</a></li>
+                            <li><a href="/contact" aria-expanded="false">Contact Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-label">Book Section</li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-notebook menu-icon"></i><span class="nav-text">Books</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            <li><a href="/books/catalogue/genres">Genres</a></li>
+                            <li><a href="/books/catalogue/books">Books Taken</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
+                            <i class="icon-grid menu-icon"></i><span class="nav-text">Book Genres</span>
+                        </a>
+                        <ul aria-expanded="false">
+                            {% for genre in genres %}
+                                <li><a href="/books/catalogue/genres/{{genre.genre_name}}" style="text-transform: capitalize;">{{genre.genre_name}}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    <li>
+                    <!--<li class="nav-label">Dashboard</li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-speedometer menu-icon"></i><span class="nav-text">Dashboard</span>
                         </a>
                         <ul aria-expanded="false">
                             <li><a href="./index.html">Home 1</a></li>
-                            <!-- <li><a href="./index-2.html">Home 2</a></li> -->
                         </ul>
                     </li>
                     <li class="mega-menu mega-menu-sm">
@@ -269,13 +313,13 @@
                             <li><a href="./ui-progressbar.html">Progressbar</a></li>
                             <li><a href="./ui-tab.html">Tab</a></li>
                             <li><a href="./ui-typography.html">Typography</a></li>
-                        <!-- </ul>
+                        </ul>
                     </li>
                     <li>
                         <a class="has-arrow" href="javascript:void()" aria-expanded="false">
                             <i class="icon-layers menu-icon"></i><span class="nav-text">Components</span>
                         </a>
-                        <ul aria-expanded="false"> -->
+                        <ul aria-expanded="false">
                             <li><a href="./uc-nestedable.html">Nestedable</a></li>
                             <li><a href="./uc-noui-slider.html">Noui Slider</a></li>
                             <li><a href="./uc-sweetalert.html">Sweet Alert</a></li>
@@ -329,7 +373,7 @@
                                 </ul>
                             </li>
                         </ul>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

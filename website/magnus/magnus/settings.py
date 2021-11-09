@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'landingpage.apps.LandingpageConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'books.apps.BooksConfig',
 ]
 
 MIDDLEWARE = [

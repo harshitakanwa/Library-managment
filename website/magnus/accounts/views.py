@@ -20,7 +20,7 @@ def login(request):
         user = auth.authenticate(username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect("users")
+            return redirect("/")
         else:
             messages.info(request, 'Invalid Credentials')
             return redirect('login')

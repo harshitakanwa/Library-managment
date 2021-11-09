@@ -1,0 +1,146 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<head>
+    <title>{{book.book_name}}</title>
+</head>
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+
+            <!--<div class="row page-titles mx-0">
+                <div class="col p-md-0">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Dashboard</a></li>
+                        <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                    </ol>
+                </div>
+            </div>
+             row -->
+
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-lg-6">
+                        <div class="card">
+                            <img class="img-fluid" src='/media/{{book.book_image}}' alt='{{book.book_name}}' style="width: 100%; height: 600px; border-radius: 20px; padding:3%;">
+                            <div class="card-body">
+                                <h3 class="card title" style="text-align: center; float:left; text-transform: capitalize;">{{book.book_name}}</h3>
+                            </div>
+                            <div class="card-footer">
+                                <p class="card-text d-inline"><small class="text-muted">Book ID : {{book.id}}</small>
+                                </p><a href="/books/catalogue/genres/{{book.book_genre.genre_name}}" class="card-link float-right"><small><h4 style="text-transform: capitalize;">Genre : {{book.book_genre.genre_name}}</h4></small></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h4 class="card title" style="text-align: center; float:left; text-transform: capitalize;">Description&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                                        <p class="card-text" style="width: 100%;">{{book.book_description}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8 col-lg-8">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div>
+                                            <span style=" font-weight:bolder; font-size:1.3em; float:left; text-transform: capitalize;">Author : &nbsp;&nbsp;</span>
+                                            <span class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; font-size:1.2em; text-overflow: ellipsis;">{{book.book_author}}</span>
+                                        </div><br>
+                                        <div>
+                                            <span style=" font-weight:bolder; font-size:1.3em; float:left; text-transform: capitalize;">Rating : &nbsp;&nbsp;</span>
+                                            <span class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; font-size:1.2em; text-overflow: ellipsis;">{% for i in rating %}⭐{% endfor %}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div>
+                                            <span style=" font-weight:bolder; font-size:1.3em; float:left; text-transform: capitalize;">Edition : &nbsp;&nbsp;</span>
+                                            <span class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; font-size:1.2em; text-overflow: ellipsis;">{{book.book_edition}}</span>
+                                        </div><br>
+                                        <div>
+                                            <span style=" font-weight:bolder; font-size:1.3em; float:left; text-transform: capitalize;">Age : &nbsp;&nbsp;</span>
+                                            <span class="card-text" style="width: 100%; overflow: hidden; white-space: nowrap; font-size:1.2em; text-overflow: ellipsis;">{{book.book_age_rating}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="button-icon">
+                                            <center>
+                                                <form method="POST" action="take">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value={{book.id}} name="book_id">
+                                                    <button {% if take %} title="Take this book" {% else %} {% if have_book %} title="This book is already with you" disabled='disabled'  {% else %} title="Request this book from {{book.book_currentholder}}" disabled='disabled'  {% endif %} {% endif %} type="submit" class="btn mb-1 btn-rounded btn-warning col-md-10 col-lg-10"><span class="btn-icon-left"><i class="fa fa-download color-warning"></i> </span>Take</button>
+                                                </form><br>
+                                                <form method="POST" action="request">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value={{book.id}} name="book_id">
+                                                    <button {% if request_status %} disabled='disabled' title="You already requested this book" {% else %} {% if take %} title="This book is available" disabled='disabled' {% else %} {% if have_book %} title="This book is already with you" disabled='disabled'  {% else %} title="Request this book from {{book.book_currentholder}}" {% endif %} {% endif %} {% endif %}type="submit" class="btn mb-1 btn-rounded btn-secondary col-md-10 col-lg-10"><span class="btn-icon-left"><i class="fa fa-share-alt color-secondary"></i> </span>Request</button>
+                                                </form>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="button-icon">
+                                            <center>
+                                                <form method="POST" action="buy">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value={{book.id}} name="book_id">
+                                                    <button type="submit" {% if for_sale %} {% if owned %} title="This is owned you" disabled='disabled' {% else %} title="Buy this book" {% endif %} {% else %} disabled='disabled' title="This book is not available for sale" {% endif %} class="btn mb-1 btn-rounded btn-secondary col-md-10 col-lg-10"><span class="btn-icon-left"><i class="fa fa-shopping-cart color-secondary"></i> </span>Buy</button>
+                                                </form><br>
+                                                <form method="POST" action="sell">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" value={{book.id}} name="book_id">
+                                                    <button type="submit" {% if owned %} {% if for_sale %} title="You have already put this book for sale" disabled='disabled' {% else %} title="Sell the book" {% endif %} {% else %} disabled='disabled' title="This book is not owned by you" {% endif %} class="btn mb-1 btn-rounded btn-success col-md-10 col-lg-10"><span class="btn-icon-left"><i class="fa fa-upload color-success"></i> </span>Sell</button>
+                                                </form>
+                                            </center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% if have_book %}
+                        <div class="row">
+                            <div class="card col-md-12 col-lg-12">
+                                <div class="card-body">
+                                    <div class="button-icon">
+                                        <center>
+                                            <form method="POST" action="return">
+                                                {% csrf_token %}
+                                                <input type="hidden" value={{book.id}} name="book_id">
+                                                <button title="Return the book" type="submit" class="btn mb-1 btn-rounded btn-warning col-md-10 col-lg-10"><span class="btn-icon-left"><i class="fa fa-download color-warning"></i> </span>Return Book</button>
+                                            </form>
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <!-- #/ container -->
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+{% endblock %}
